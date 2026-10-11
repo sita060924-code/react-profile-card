@@ -1,15 +1,18 @@
-
 import { useState } from 'react'
 import './App.css'
 
 function ProfileCard({ name, role, bio, skills }) {
   const [following, setFollowing] = useState(false)
+  const [followers, setFollowers] = useState(256)
+
+  function handleFollow() {
+    setFollowing((previous) => !previous)
+    setFollowers(following ? 256 : 257)
+  }
 
   return (
     <article className="profile-card">
-      <div className="profile-avatar">
-        {name.charAt(0)}
-      </div>
+      <div className="profile-avatar">{name.charAt(0)}</div>
 
       <p className="profile-label">DEVELOPER PROFILE</p>
       <h1>{name}</h1>
@@ -26,13 +29,30 @@ function ProfileCard({ name, role, bio, skills }) {
 
       <button
         className="follow-button"
-        onClick={() => setFollowing(!following)}
+        onClick={handleFollow}
+        aria-pressed={following}
       >
         {following ? 'Following' : 'Follow Me'}
       </button>
 
-      <p className="profile-footer">
-        {following ? 'Thanks for connecting!' : 'Let’s build something great.'}
+      <div className="profile-stats">
+        <div className="stat">
+          <strong>{followers}</strong>
+          <span>FOLLOWERS</span>
+        </div>
+
+        <div className="stat-divider"></div>
+
+        <div className="stat">
+          <strong>124</strong>
+          <span>FOLLOWING</span>
+        </div>
+      </div>
+
+      <p className="profile-footer" aria-live="polite">
+        {following
+          ? 'Thanks for connecting!'
+          : "Let's build something great."}
       </p>
     </article>
   )
