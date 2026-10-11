@@ -1,8 +1,10 @@
-```css
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 :root {
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
   color: #f1f5f9;
-  background: #060b16;
+  background: #050816;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -16,13 +18,303 @@
 html,
 body,
 #root {
-  margin: 0;
+  width: 100%;
   min-width: 320px;
   min-height: 100%;
-  width: 100%;
+  margin: 0;
 }
 
 body {
   min-height: 100vh;
+  background: #050816;
 }
-```
+
+button {
+  font: inherit;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(8, 145, 178, 0.15), transparent 32%),
+    radial-gradient(circle at 88% 82%, rgba(79, 70, 229, 0.15), transparent 34%),
+    #050816;
+  color: #f1f5f9;
+}
+
+.profile-card {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  max-width: 420px;
+  padding: 42px 32px 30px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid rgba(125, 180, 230, 0.18);
+  border-radius: 28px;
+  background: linear-gradient(
+    145deg,
+    rgba(18, 32, 56, 0.98),
+    rgba(8, 15, 30, 0.99) 75%
+  );
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.45),
+    0 0 50px rgba(14, 165, 233, 0.06);
+  animation: card-appear 0.65s ease both;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 12%;
+  width: 76%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #22d3ee,
+    #818cf8,
+    transparent
+  );
+}
+
+.profile-card:hover {
+  border-color: rgba(56, 189, 248, 0.32);
+  box-shadow:
+    0 36px 95px rgba(0, 0, 0, 0.48),
+    0 0 38px rgba(14, 165, 233, 0.09);
+  transform: translateY(-4px);
+}
+
+.profile-avatar {
+  width: 104px;
+  height: 104px;
+  margin: 0 auto 25px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(103, 232, 249, 0.75);
+  border-radius: 50%;
+  background: linear-gradient(135deg, #164e63, #312e81);
+  color: #ecfeff;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -2px;
+  box-shadow:
+    0 0 0 7px rgba(34, 211, 238, 0.045),
+    0 0 35px rgba(34, 211, 238, 0.16);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.profile-card:hover .profile-avatar {
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 0 8px rgba(34, 211, 238, 0.06),
+    0 0 42px rgba(34, 211, 238, 0.24);
+}
+
+.profile-label {
+  margin: 0;
+  color: #67e8f9;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3.4px;
+}
+
+.profile-card h1 {
+  margin: 15px 0 9px;
+  color: #f8fafc;
+  font-size: clamp(25px, 6vw, 30px);
+  font-weight: 800;
+  letter-spacing: -1.1px;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.profile-card h2 {
+  margin: 0;
+  color: #93c5fd;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.15px;
+  line-height: 1.7;
+}
+
+.profile-bio {
+  max-width: 310px;
+  margin: 21px auto 0;
+  color: #a7b5ca;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin: 25px 0 27px;
+}
+
+.skill {
+  padding: 8px 12px;
+  border: 1px solid rgba(96, 165, 250, 0.19);
+  border-radius: 10px;
+  background: rgba(30, 58, 95, 0.32);
+  color: #dbeafe;
+  font-size: 11px;
+  font-weight: 600;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.skill:hover {
+  transform: translateY(-2px);
+  border-color: rgba(103, 232, 249, 0.5);
+  background: rgba(14, 116, 144, 0.2);
+  color: #ecfeff;
+}
+
+.follow-button {
+  position: relative;
+  width: 100%;
+  min-height: 48px;
+  padding: 14px 20px;
+  border: 1px solid rgba(125, 211, 252, 0.35);
+  border-radius: 12px;
+  background: linear-gradient(100deg, #0284c7, #4f46e5);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.35px;
+  cursor: pointer;
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.follow-button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.12);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.32);
+}
+
+.follow-button:active {
+  transform: scale(0.985);
+}
+
+.follow-button:focus-visible {
+  outline: 3px solid #67e8f9;
+  outline-offset: 4px;
+}
+
+.profile-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 34px;
+  margin: 27px 0 8px;
+  padding: 19px 10px;
+  border-top: 1px solid rgba(96, 165, 250, 0.13);
+  border-bottom: 1px solid rgba(96, 165, 250, 0.13);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+
+.stat strong {
+  color: #f0f9ff;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat span {
+  color: #67c9f5;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 38px;
+  background: rgba(56, 189, 248, 0.3);
+}
+
+.profile-footer {
+  margin: 19px 0 0;
+  color: #8191ab;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+@keyframes card-appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 420px) {
+  .app-container {
+    padding: 24px 14px;
+  }
+
+  .profile-card {
+    padding: 34px 21px 25px;
+    border-radius: 23px;
+  }
+
+  .profile-avatar {
+    width: 94px;
+    height: 94px;
+    font-size: 36px;
+  }
+
+  .profile-stats {
+    gap: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .profile-card:hover,
+  .profile-card:hover .profile-avatar,
+  .skill:hover {
+    transform: none;
+  }
+}
