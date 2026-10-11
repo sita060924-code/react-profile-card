@@ -1,16 +1,77 @@
-# React + Vite
+# React Profile Card
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive developer profile card built with React and CSS. This project demonstrates reusable components, props, state management, and interactive UI design.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View Live Website](https://react-profile-card-ia40ztr1k-sita060924-1026.vercel.app/)
 
-## React Compiler
+## GitHub Repository
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[View Source Code](https://github.com/sita060924-code/react-profile-card)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Reusable React profile card component
+- Dynamic content using props
+- Interactive Follow button
+- Follower counter using React state
+- Responsive layout for different screen sizes
+- Premium dark navy, cyan, and blue design
+- Smooth hover effects and animations
+
+## Technologies Used
+
+- React
+- JavaScript
+- HTML
+- CSS
+- Vite
+- Git and GitHub
+- Vercel
+
+## React Concepts Practised
+
+- Functional components
+- Props for passing data
+- `useState` for interactive behaviour
+- Event handling with `onClick`
+- Rendering lists with `map()`
+- Conditional rendering
+- Component-based UI development
+
+## Run Locally
+
+1. Clone this repository:
+
+   ```bash
+   git clone https://github.com/sita060924-code/react-profile-card.git
+   ```
+
+2. Open the project folder:
+
+   ```bash
+   cd react-profile-card
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+## What I Learned
+
+This project helped me understand how to create reusable React components, pass data through props, manage interactive state, style a responsive interface, and deploy a React application.
+
+## Author
+
+Aspiring Software Developer
+
+Built as part of my React learning journey.
